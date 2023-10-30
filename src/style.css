@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     height: 100%;
-    background-color: #557c93;
+    background-color: #4a7d9b;
     background-size: cover;
     background-position: center;
 }
@@ -38,6 +38,7 @@ header {
     height: 60px;
     max-width: 1200px;
     margin: 0 auto;
+    display:flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -56,6 +57,30 @@ header {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
+/*Responsive Design*/
+
+@media (max-width: 1520px) {
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display:block;
+    }
+}
+
+/*Dropdown Menu*/
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+}
