@@ -10,7 +10,10 @@ module.exports = {
       backgroundImage: {
         colors: {
           'off-white': '#FFFAE7',
-          
+          fontFamily: {
+            ibm: ["var(--font-ibm)"],
+            DMSans: ["var(--font-DMSans)"],
+          },
         },
       },
     },

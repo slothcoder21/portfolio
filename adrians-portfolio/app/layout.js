@@ -1,5 +1,20 @@
 import React from "react";
 import "./globals.css";
+import  {IBM_Plex_Mono } from 'next/font/google';
+import {DM_Sans} from 'next/font/google';
+
+const ibm = IBM_Plex_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-ibm',
+  weight: '500',
+})
+
+const DMSans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-DMSans'
+})
 
 export const metadata = {
   title: "Adrian's Portfolio",
@@ -8,8 +23,8 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return(
-    <html lang="en">
-      <body className={'${inter.className}'}>
+    <html lang="en" className="${ibm.className}${DMSans.className} font-sans">
+      <body className={'${inter.className} bg-[#FFFAE7]'}>
         {children}
       </body>
     </html>
