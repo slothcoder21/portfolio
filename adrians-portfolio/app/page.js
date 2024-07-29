@@ -1,6 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+
 
 export default function Home() {
   return (
@@ -63,7 +70,7 @@ export default function Home() {
           About Me.
         </h1>
         <div id="Timeline" className='justify-center'>
-
+          
         </div>
       </section>
 
