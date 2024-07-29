@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-ibm {
-  font-weight: 500,
-}
-
-.font-DMSans {
-  
+html {
+  scroll-behavior: smooth;
 }

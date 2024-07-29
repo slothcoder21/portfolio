@@ -9,13 +9,16 @@ export default function Home() {
         <div id="Home">
           <div id="header" className="flex flex-col md:flex-row items-center md:items-start md:justify-between p-6 md:p-0">
             <div className="flex-shrink-0 md:ml-24">
-              <Image
-                src="/logo.svg"
-                alt="Computer Icon"
-                width={67}
-                height={69}
-                className="md:absolute md:mt-16"
-              />
+              <Link href="#Home">
+                <Image
+                  src="/logo.svg"
+                  alt="Computer Icon"
+                  width={67}
+                  height={69}
+                  className="md:absolute md:mt-16"
+                />
+              </Link>
+              
             </div>
             <div id="Navbar" className="mt-6 md:mt-16 text-[#858585] space-x-4 md:space-x-10 md:mr-24">
               <Link href="#about-me" className="font-DMSans text-base md:text-lg relative
@@ -55,9 +58,18 @@ export default function Home() {
         </div>
       </main>
 
-      <section id="about-me" className='w-full min-h-screen mt-16 md:mt-48 mx-6 md:mx-24'>
-        <h1 className="text-4xl">
+      <section id="about-me" className='w-full min-h-screen'>
+        <h1 className="text-4xl font-medium mt-16 md:mt-48 mx-6 md:mx-24 overflow-x-hidden overflow-y-hidden">
           About Me.
+        </h1>
+        <div id="Timeline" className='justify-center'>
+
+        </div>
+      </section>
+
+      <section id="projects" className='w-full min-h-screen'>
+        <h1>
+          Projects.
         </h1>
       </section>
     </>
