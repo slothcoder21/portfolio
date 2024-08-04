@@ -1,8 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import Card from './components/projectTile';
 
 export default function Home() {
   return (
@@ -48,8 +53,147 @@ export default function Home() {
         <h1 className="text-4xl font-medium mt-16 md:mt-48 mx-6 md:mx-24">
           About Me.
         </h1>
+        <div>
+          <h2 className="text-3xl font-medium mt-3 md:mt-10 mx-6 md:mx-24">
+            Bio: 
+          </h2>
+        </div>
         <div id="Timeline" className="justify-center">
-          {/* Timeline content goes here */}
+          <Timeline position='alternate-reverse'>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot sx={{ 
+                  backgroundColor: '#000000'
+                }} />
+                <TimelineConnector sx={{
+                  backgroundColor: '#000000'
+                }} />
+              </TimelineSeparator>
+              <TimelineContent className="font-medium font-DMSans text-2xl">
+                2003 - Birth
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot sx={{ 
+                  backgroundColor: '#000000'
+                }} />
+                <TimelineConnector sx={{
+                  backgroundColor: '#000000'
+                }} />
+              </TimelineSeparator>
+              <TimelineContent className="font-medium font-DMSans text-2xl">
+                2023 - Completed A.S. in Computer Science @ De Anza College
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot sx={{ 
+                  backgroundColor: '#000000'
+                }} />
+                <TimelineConnector sx={{
+                  backgroundColor: '#000000'
+                }} />
+              </TimelineSeparator>
+              <TimelineContent className="font-medium font-DMSans text-2xl">
+                2024 - Front-End Developer Intern @ NSI
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot sx={{ 
+                  backgroundColor: '#000000'
+                }} />
+                <TimelineConnector sx={{
+                  backgroundColor: '#000000'
+                }} />
+              </TimelineSeparator>
+              <TimelineContent className="font-medium font-DMSans text-2xl">
+                2026 - Completing B.S. in Computer Science and Statistics
+                and a minor in Technology Management @ UC Davis
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        </div>
+        <div id="ilove">
+          <h2 className="text-3xl font-medium mt-3 md:mt-10 mx-6 md:mx-24">
+            I love:
+          </h2>
+          <span className='inline-flex'>
+            <Image
+              src="/outdoor.svg"
+              alt="outdoor"
+              width={300}
+              height={478}
+              className='rounded-md mt-3 md:mt-10 mx-6 md:mx-24'
+            />
+            <div className='mt-16'>
+              <h1 className='font-medium text-2xl'>
+                The outdoors!
+              </h1>
+              <p className='font-light text-xl'>
+                I love spending my time outside in nature! 
+              </p>
+            </div>
+          </span>
+          
+          <span className='inline-flex'>
+            <Image
+              src="/f1.svg"
+              alt="outdoor"
+              width={300}
+              height={478}
+              className='rounded-md mt-3 md:mt-10 mx-6 md:mx-24'
+            />
+            <div className='mt-16'>
+              <h1 className='font-medium text-2xl'>
+                Formula 1!
+              </h1>
+              <p className='font-light text-xl'>
+                I love watching F1 races. I went to the 2023 Grand Prix in Las Vegas. 
+              </p>
+            </div>
+          </span>
+
+          <span className='inline-flex'>
+            <Image
+              src="/food.svg"
+              alt="outdoor"
+              width={300}
+              height={478}
+              className='rounded-md mt-3 md:mt-10 mx-6 md:mx-24'
+            />
+            <div className='mt-16'>
+              <h1 className='font-medium text-2xl'>
+                Food!
+              </h1>
+              <p className='font-light text-xl'>
+                At heart, I am truly a foodie. I love trying new foods everywhere I go.
+              </p>
+              <p>
+              This may be the reason why I have a gigantic hole in my wallet....
+              </p>
+            </div>
+          </span>
+
+          <span className='inline-flex'>
+            <Image
+              src="/climbing.svg"
+              alt="outdoor"
+              width={300}
+              height={478}
+              className='rounded-md mt-3 md:mt-10 mx-6 md:mx-24'
+            />
+            <div className='mt-16'>
+              <h1 className='font-medium text-2xl'>
+                Sports!
+              </h1>
+              <p className='font-light text-xl'>
+                On my free time, I love to stay active. Whether it may be climbing, weight lifting, playing badminton, running, or swimming, I enjoy
+                staying healthy.
+              </p>
+            </div>
+          </span>
         </div>
       </section>
 
@@ -57,7 +201,15 @@ export default function Home() {
         <h1 className="text-4xl font-medium mt-16 md:mt-48 mx-6 md:mx-24">
           Projects.
         </h1>
-        {/* Projects content goes here */}
+        <div>
+          <Card 
+          title='Test'
+          image=''
+          description='Test'
+          href='Test'
+          />
+        </div>
+        
       </section>
 
     </>
